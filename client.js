@@ -9,6 +9,9 @@ const connect = function() {
   conn.on("connect", () => {
     console.log("Connection successful!");
     conn.write("Name: KV");
+//    setInterval(() => {
+//      conn.write("Move: up");
+//    }, 50);
   });
 
   conn.on("data", (data) => {
