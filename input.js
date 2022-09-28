@@ -1,11 +1,14 @@
 let connection;
 
 const handleUserInput = function(key) {
+  
+  // exit
   if (key === '\u0003') {
     console.log("ciao snek");
     process.exit();
   }
 
+  // movement controls
   if (key === 'w') {
     connection.write("Move: up");
   }
@@ -20,6 +23,16 @@ const handleUserInput = function(key) {
 
   if (key === 'd') {
     connection.write("Move: right");
+  }
+
+
+  // messages
+  if (key === 'q') {
+    connection.write("Say: snakes get rakes");
+  }
+
+  if (key === 'e') {
+    connection.write("Say: snitches get stitches");
   }
 };
 
